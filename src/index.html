@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="HideFunctions.js"></script>
+</head>
+<body onload="ChoicePreMade()">
+  <img src="delicious-pizza-food.jpg" alt="img.jpg" width="600">
+  <form action="/formin">
+    <fieldset>
+      <legend> How do you get ur Pizza?</legend>
+    <p> Wie bestellst du?</p>
+    <input type="radio" id="there" name="TypeoDel" value="Pick Up" checked>
+    <label for="there">Abholen</label><br>
+    <input type="radio" id="take" name="TypeoDel" value="deliver">
+    <label for="take">Liefern</label><br>
+    </fieldset>
+    <fieldset>
+      <legend> Choice Of Pizza</legend>
+    <p>Premade or SelfMadepizza?</p>
+    <input type="radio" id="PreMadePizzachoice" name="chooseTypeoPizza" onclick="ChoicePreMade()" value="PreMadePizza" checked>
+    <label for="PreMadePizzachoice">PreMade</label><br>
+    <input type="radio" id="SelfMadePizzaChoice" name="chooseTypeoPizza" onclick="ChoiceSelfMade()" value="SelfMadePizza">
+    <label for="SelfMadePizzaChoice">SelfMade</label><br>
+    </fieldset>
+
+    <br>
+    <div id="PreMadeSelec">
+      <fieldset>
+        <legend>Choice Premade Pizza</legend>
+        <p> What Pizza do you want?</p>
+        <label for="PreMadePizza"> PreMadePizzas</label>
+        <select name="PreMade" id="PreMadePizza">
+          <option value="Margagete">Margagete</option>
+          <option value="Salama">Salama</option>
+          <option value="Gorganzuvini">Gorganzuvini</option>
+          <option value="Calzona">Calzona</option>
+        </select>
+      </fieldset>
+    </div>
+
+    <br>
+    <div id="SelfMade">
+      <fieldset>
+        <legend> Ingredients</legend>
+        <p> What do you want on ur Pizza?</p>
+        <label for="zutat1">Cheese</label>
+        <input type="checkbox" id="zutat1" name="Ingredient0" value="Cheese" checked> <br>
+        <label for="zutat2">TomatoSauce</label>
+        <input type="checkbox" id="zutat2" name="Ingredient1" value="Tomatoes" checked> <br>
+        <label for="zutat3">Olives</label>
+        <input type="checkbox" id="zutat3" name="Ingredient2" value="Olives"> <br>
+        <label for="zutat4">Corn</label>
+        <input type="checkbox" id="zutat4" name="Ingredient3" value="Corn"> <br>
+        <label for="zutat8">Ham</label>
+        <input type="checkbox" id="zutat8" name="Ingredient4" value="Ham"> <br>
+        <label for="zutat9">Garlic</label>
+        <input type="checkbox" id="zutat9" name="Ingredient5" value="Garlic"> <br>
+        <label for="zutat12">Oregano</label>
+        <input type="checkbox" id="zutat12" name="Ingredient6" value="Oregano"> <br>
+      </fieldset>
+    </div>
+    <br>
+
+
+
+    <fieldset>
+      <legend>How cooked u want ur Pizza?</legend>
+      <p>Bräunegrad</p>
+      <input type="range"  name="cooked" min="1" max="5">
+    </fieldset>
+    <br><br>
+    <input type="submit">
+  </form>
+
+</body>
+</html>
